@@ -25,6 +25,10 @@ namespace ClinicManagementSystem
             if(username == "admin" && password == "1234")
             {
                 MessageBox.Show("You have entered right username and password");
+
+                this.Hide();
+                Dashboard ds = new Dashboard();
+                ds.Show();
             }
             else
             {
