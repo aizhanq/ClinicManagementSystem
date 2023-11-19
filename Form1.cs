@@ -20,6 +20,16 @@ namespace ClinicManagementSystem
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUserName.Text;
+            string password = txtPassword.Text;
+
+            if(username == "admin" && password == "1234")
+            {
+                MessageBox.Show("You have entered right username and password");
+            }
+            else
+            {
+                MessageBox.Show("Wrong username and password");
+            }
         }
     }
 }

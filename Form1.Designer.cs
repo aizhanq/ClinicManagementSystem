@@ -96,6 +96,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUserName);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clinic Management System";
             this.ResumeLayout(false);
             this.PerformLayout();
