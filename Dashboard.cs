@@ -16,5 +16,37 @@ namespace ClinicManagementSystem
         {
             InitializeComponent();
         }
+
+        private void btnAddPatient_Click(object sender, EventArgs e)
+        {
+            labelIndecator1.ForeColor = Color.Red;
+            labelIndecator2.ForeColor = Color.Black;
+            labelIndecator3.ForeColor = Color.Black;
+            labelIndecator4.ForeColor = Color.Black;
+        }
+
+        private void btnAddDiagnosis_Click(object sender, EventArgs e)
+        {
+            labelIndecator1.ForeColor = Color.Black;
+            labelIndecator2.ForeColor = Color.Red;
+            labelIndecator3.ForeColor = Color.Black;
+            labelIndecator4.ForeColor = Color.Black;
+        }
+
+        private void btnHistory_Click(object sender, EventArgs e)
+        {
+            labelIndecator1.ForeColor = Color.Black;
+            labelIndecator2.ForeColor = Color.Black;
+            labelIndecator3.ForeColor = Color.Red;
+            labelIndecator4.ForeColor = Color.Black;
+        }
+
+        private void btnClinic_Click(object sender, EventArgs e)
+        {
+            labelIndecator1.ForeColor = Color.Black;
+            labelIndecator2.ForeColor = Color.Black;
+            labelIndecator3.ForeColor = Color.Black;
+            labelIndecator4.ForeColor = Color.Red;
+        }
     }
 }

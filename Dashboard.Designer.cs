@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnAddPatient = new System.Windows.Forms.Button();
+            this.btnAddDiagnosis = new System.Windows.Forms.Button();
+            this.btnHistory = new System.Windows.Forms.Button();
+            this.btnClinic = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelIndecator1 = new System.Windows.Forms.Label();
+            this.labelIndecator4 = new System.Windows.Forms.Label();
+            this.labelIndecator3 = new System.Windows.Forms.Label();
+            this.labelIndecator2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -57,49 +57,53 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Clinic Management System";
             // 
-            // button1
+            // btnAddPatient
             // 
-            this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(55, 266);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 40);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add New Patient Record";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAddPatient.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnAddPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddPatient.Location = new System.Drawing.Point(55, 266);
+            this.btnAddPatient.Name = "btnAddPatient";
+            this.btnAddPatient.Size = new System.Drawing.Size(187, 40);
+            this.btnAddPatient.TabIndex = 1;
+            this.btnAddPatient.Text = "Add New Patient Record";
+            this.btnAddPatient.UseVisualStyleBackColor = false;
+            this.btnAddPatient.Click += new System.EventHandler(this.btnAddPatient_Click);
             // 
-            // button2
+            // btnAddDiagnosis
             // 
-            this.button2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(55, 312);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(187, 40);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Add Diagnosis Information";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnAddDiagnosis.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnAddDiagnosis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddDiagnosis.Location = new System.Drawing.Point(55, 312);
+            this.btnAddDiagnosis.Name = "btnAddDiagnosis";
+            this.btnAddDiagnosis.Size = new System.Drawing.Size(187, 40);
+            this.btnAddDiagnosis.TabIndex = 2;
+            this.btnAddDiagnosis.Text = "Add Diagnosis Information";
+            this.btnAddDiagnosis.UseVisualStyleBackColor = false;
+            this.btnAddDiagnosis.Click += new System.EventHandler(this.btnAddDiagnosis_Click);
             // 
-            // button3
+            // btnHistory
             // 
-            this.button3.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(55, 358);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(187, 40);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Full History of the Patient";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnHistory.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnHistory.Location = new System.Drawing.Point(55, 358);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(187, 40);
+            this.btnHistory.TabIndex = 3;
+            this.btnHistory.Text = "Full History of the Patient";
+            this.btnHistory.UseVisualStyleBackColor = false;
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
-            // button4
+            // btnClinic
             // 
-            this.button4.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(55, 404);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(187, 40);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Clinic Information";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnClinic.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnClinic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnClinic.Location = new System.Drawing.Point(55, 404);
+            this.btnClinic.Name = "btnClinic";
+            this.btnClinic.Size = new System.Drawing.Size(187, 40);
+            this.btnClinic.TabIndex = 4;
+            this.btnClinic.Text = "Clinic Information";
+            this.btnClinic.UseVisualStyleBackColor = false;
+            this.btnClinic.Click += new System.EventHandler(this.btnClinic_Click);
             // 
             // label2
             // 
@@ -120,16 +124,16 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // button5
+            // btnExit
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(91, 504);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(92, 35);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Exit";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnExit.Location = new System.Drawing.Point(91, 504);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(92, 35);
+            this.btnExit.TabIndex = 7;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
             // 
             // pictureBox2
             // 
@@ -141,49 +145,49 @@
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
-            // label3
+            // labelIndecator1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(21, 266);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 39);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "»";
+            this.labelIndecator1.AutoSize = true;
+            this.labelIndecator1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelIndecator1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelIndecator1.Location = new System.Drawing.Point(21, 266);
+            this.labelIndecator1.Name = "labelIndecator1";
+            this.labelIndecator1.Size = new System.Drawing.Size(37, 39);
+            this.labelIndecator1.TabIndex = 9;
+            this.labelIndecator1.Text = "»";
             // 
-            // label4
+            // labelIndecator4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(21, 405);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 39);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "»";
+            this.labelIndecator4.AutoSize = true;
+            this.labelIndecator4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelIndecator4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelIndecator4.Location = new System.Drawing.Point(21, 405);
+            this.labelIndecator4.Name = "labelIndecator4";
+            this.labelIndecator4.Size = new System.Drawing.Size(37, 39);
+            this.labelIndecator4.TabIndex = 10;
+            this.labelIndecator4.Text = "»";
             // 
-            // label5
+            // labelIndecator3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(21, 358);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 39);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "»";
+            this.labelIndecator3.AutoSize = true;
+            this.labelIndecator3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelIndecator3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelIndecator3.Location = new System.Drawing.Point(21, 358);
+            this.labelIndecator3.Name = "labelIndecator3";
+            this.labelIndecator3.Size = new System.Drawing.Size(37, 39);
+            this.labelIndecator3.TabIndex = 11;
+            this.labelIndecator3.Text = "»";
             // 
-            // label6
+            // labelIndecator2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(21, 313);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 39);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "»";
+            this.labelIndecator2.AutoSize = true;
+            this.labelIndecator2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelIndecator2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelIndecator2.Location = new System.Drawing.Point(21, 313);
+            this.labelIndecator2.Name = "labelIndecator2";
+            this.labelIndecator2.Size = new System.Drawing.Size(37, 39);
+            this.labelIndecator2.TabIndex = 12;
+            this.labelIndecator2.Text = "»";
             // 
             // Dashboard
             // 
@@ -191,18 +195,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1024, 575);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnClinic);
+            this.Controls.Add(this.btnHistory);
+            this.Controls.Add(this.btnAddDiagnosis);
+            this.Controls.Add(this.btnAddPatient);
+            this.Controls.Add(this.labelIndecator1);
+            this.Controls.Add(this.labelIndecator2);
+            this.Controls.Add(this.labelIndecator3);
+            this.Controls.Add(this.labelIndecator4);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clinic Management System";
@@ -216,17 +220,17 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnAddPatient;
+        private System.Windows.Forms.Button btnAddDiagnosis;
+        private System.Windows.Forms.Button btnHistory;
+        private System.Windows.Forms.Button btnClinic;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelIndecator1;
+        private System.Windows.Forms.Label labelIndecator4;
+        private System.Windows.Forms.Label labelIndecator3;
+        private System.Windows.Forms.Label labelIndecator2;
     }
 }
