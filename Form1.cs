@@ -22,18 +22,19 @@ namespace ClinicManagementSystem
             string username = txtUserName.Text;
             string password = txtPassword.Text;
 
-            if(username == "admin" && password == "1234")
-            {
-                MessageBox.Show("You have entered right username and password");
+            //MessageBox.Show("You have entered right username and password");
 
-                this.Hide();
-                Dashboard ds = new Dashboard();
-                ds.Show();
-            }
-            else
-            {
-                MessageBox.Show("Wrong username and password");
-            }
+            this.Hide();
+            Dashboard ds = new Dashboard();
+            ds.Show();
+            //if (username == "admin" && password == "1234")
+            //{
+                
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Wrong username and password");
+            //}
         }
     }
 }

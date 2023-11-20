@@ -23,6 +23,9 @@ namespace ClinicManagementSystem
             labelIndecator2.ForeColor = Color.Black;
             labelIndecator3.ForeColor = Color.Black;
             labelIndecator4.ForeColor = Color.Black;
+
+            panel1.Visible = true;
+
         }
 
         private void btnAddDiagnosis_Click(object sender, EventArgs e)
@@ -47,6 +50,16 @@ namespace ClinicManagementSystem
             labelIndecator2.ForeColor = Color.Black;
             labelIndecator3.ForeColor = Color.Black;
             labelIndecator4.ForeColor = Color.Red;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
         }
     }
 }
