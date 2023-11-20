@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -60,6 +61,21 @@ namespace ClinicManagementSystem
         private void Dashboard_Load(object sender, EventArgs e)
         {
             panel1.Visible = false;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            var name = txtName.Text;
+            var address = txtAddress.Text;
+            var contact = Convert.ToInt64(txtContact.Text);
+            var age = Convert.ToInt32(txtAge.Text);
+            var gender = comboGender.Text;
+            var blood = txtBlood.Text;
+            var disease = txtDisease.Text;
+            var pid = Convert.ToInt32(txtPid.Text);
+
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "data source = USER-PC\\SQLEXPRESS; database = ClinicDb; integrated security = True;";
         }
     }
 }
