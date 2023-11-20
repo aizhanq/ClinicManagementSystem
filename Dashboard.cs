@@ -65,17 +65,32 @@ namespace ClinicManagementSystem
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            var name = txtName.Text;
-            var address = txtAddress.Text;
-            var contact = Convert.ToInt64(txtContact.Text);
-            var age = Convert.ToInt32(txtAge.Text);
-            var gender = comboGender.Text;
-            var blood = txtBlood.Text;
-            var disease = txtDisease.Text;
-            var pid = Convert.ToInt32(txtPid.Text);
+            try
+            {
+                String name = txtName.Text;
+                String address = txtAddress.Text;
+                Int64 contact = Convert.ToInt64(txtContact.Text);
+                int age = Convert.ToInt32(txtAge.Text);
+                String gender = comboGender.Text;
+                String blood = txtBlood.Text;
+                String disease = txtDisease.Text;
+                int pid = Convert.ToInt32(txtPid.Text);
 
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = USER-PC\\SQLEXPRESS; database = ClinicDb; integrated security = True;";
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "Data Source=USER-PC\\SQLEXPRESS;Initial Catalog=ClinicDb;Integrated Security=True;Pooling=False";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "insert into AddPatient values ('" + name + "','" + address + "'," + contact + "," + age + ",'" + gender + "','" + blood + "','" + disease + "'," + pid + ")";
+                SqlDataAdapter DA = new SqlDataAdapter(cmd);
+                DataSet DS = new DataSet();
+                DA.Fill(DS);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error");
+            }
+           
+            
         }
     }
 }
