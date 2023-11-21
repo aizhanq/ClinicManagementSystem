@@ -89,8 +89,18 @@ namespace ClinicManagementSystem
             {
                 MessageBox.Show("Error");
             }
-           
+
+            MessageBox.Show("Data Saved!");
             
+            txtName.Clear();
+            txtAddress.Clear();
+            txtContact.Clear();
+            txtAge.Clear();
+            comboGender.ResetText();
+            txtBlood.Clear();
+            txtDisease.Clear();
+            txtPid.Clear();
+
         }
     }
 }
