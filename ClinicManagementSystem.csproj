@@ -88,5 +88,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\CMS_addPatient.jpg" />
+    <Content Include="img\CMS_login.jpg" />
+    <Content Include="img\CMS_main.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
