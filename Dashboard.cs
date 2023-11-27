@@ -88,6 +88,7 @@ namespace ClinicManagementSystem
             catch (Exception)
             {
                 MessageBox.Show("Error");
+                return;
             }
 
             MessageBox.Show("Data Saved!");
